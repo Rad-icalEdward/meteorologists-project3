@@ -104,4 +104,5 @@ As well as the weather forecast it would also return the date, the temperature, 
 
 Due to the fact that my code relied on a search function as opposed to a drop down menu which others members of the group had used we struggled to combine everyone's individual code into one functioning dashboard. We tried to get around this by removing the search function and changing it to a drop down with a list of pre-defined cities, however we still couldn't overcome the challenge of getting all of the different functions on to the same dashboard. Due to the limited time constraints that we had for this project, the decision was made to leave my weather forecast out of the final dashboard, but it has still been included in th final submission as an additional visualisation and to highlight one of the challenges that we faced.
 
-INSERT IMAGE HERE
+![image (2)](https://github.com/Rad-icalEdward/meteorologists-project3/assets/121570218/32b264ea-c7eb-440a-b621-bbfcdb65f628)
+
