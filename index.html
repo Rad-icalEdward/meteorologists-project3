@@ -42,30 +42,32 @@
 
   <!-- The div that holds our map -->
   <div id="map-id"></div>
-  <div class="col-md-2">
-    <div class="well">
-      <h5>Choose the city:</h5>
-      <select id="selDataset" onchange="optionChanged(this.value)"></select>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+        <div class="well">
+          <h5>Choose the city:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+      </div>
+      <div class="col-md-2"> <!-- <div class="panel panel-primary"></div> -->
+        <h5><center>Weather gauges:</center></h5>
+        <div id="sample-metadata" class="panel-body"></div>
+        <div id="gaugeTemperature"></div>
+        <div id="gaugeHumidity"></div>
+        <div id="gaugeUV"></div>
+      </div>
+      <div class="col-md-3">
+        <h5><center>Sun and moon:</center></h5>
+        <div id="astronomy"></div>
+      </div>
+      <div class="col-md-4">
+        <h5>Typical weather conditions:</h5>
+        <div id="city-weather"></div>
     </div>
-    <!-- <div class="panel panel-primary"></div> -->
-    <div id="sample-metadata" class="panel-body"></div>
-    <div class="col-md-4">
-      <div id="gaugeTemperature"></div>
     </div>
-  <div class="col-md-4">
-    <div id="gaugeHumidity"></div>
-  </div>
-  <div class="col-md-4">
-    <div id="gaugeUV"></div>
-  </div>
-  <div id="astronomy" class="col-md-3"></div>
-  <div id="city-weather" class="col-md-3"></div>
-</div>
-    <!-- </div> -->
-    <!-- </div> -->
   </div>
   <!-- Our JavaScript file -->
-  <script type="text/javascript" src="static/js/data.js"></script>
   <script type="text/javascript" src="static/js/plots.js"></script>
   <!-- <script type="text/javascript" src="static/js/combined.js"></script> -->
 

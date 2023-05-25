@@ -169,7 +169,7 @@ function updateCharts(cityID) {
             {
                 domain: { x: [0, 1], y: [0, 1] },
                 value: data.current.uv,
-                title: { text: "UV" },
+                title: { text: "UV"},
                 type: "indicator",
                 mode: "gauge+number",
                 delta: { reference: 6 },
@@ -236,18 +236,18 @@ function updateSunMoon(cityID) {
             // Return the sunrise time for the current day
             let sunriseTime = data.astronomy.astro.sunrise;
             console.log(sunriseTime);
-            astrologyDiv.innerHTML += "Time of today's sunrise: " + sunriseTime + "<br /><br />"; 
+            astrologyDiv.innerHTML += "Time of today's sunrise: " + sunriseTime + "<br /><br /><br />"; 
             imageSunMoon(sunRise, "sunrise by icon 54 from Noun Project", 100, 100)
             
             // Return the sunset time time for the current day
             let sunsetTime = data.astronomy.astro.sunset;
             console.log(sunsetTime);
-            astrologyDiv.innerHTML += "<br /><br />Time of today's sunset: " + sunsetTime + "<br /><br />"; 
+            astrologyDiv.innerHTML += "<br /><br />Time of today's sunset: " + sunsetTime + "<br /><br /><br />"; 
             imageSunMoon(sunSet, "sunset by icon 54 from Noun Project", 100, 100)
             
             // Return the moon phase for the current night
             let moonPhase = data.astronomy.astro.moon_phase;
-            astrologyDiv.innerHTML += "<br /><br />Today's moon phase: " + moonPhase + "<br /><br />";
+            astrologyDiv.innerHTML += "<br /><br />Today's moon phase: " + moonPhase + "<br /><br /><br />";
             
             if (moonPhase == "New Moon") {
                 let src = newMoon;
@@ -363,7 +363,7 @@ function updateWeatherConditions(cityID) {
                 
                 var layout = {
                 height: 510,
-                width: 600,
+                width: 500,
                 margin: {
                     l: 0
                 },
