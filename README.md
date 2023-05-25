@@ -74,7 +74,7 @@ To display the current day's sunrise time, sunset time & moon phase and a pie ch
   ```
                                            
 <li>I also had trouble with the correct placement of different parts of the code and making sure I was able to call the data and variables I needed. I have not fully resolved this and my pie chart generates live in the browser as the for loop runs - I would have preferred for it to appear once the code has run, but I now actually think this looks quite cool as long as you have a fast PC!</ul>
-
+<br><br>
 <strong>Isil Bulut</strong><br><br>
 
 Data Extraction from API to Database
