@@ -33,6 +33,12 @@
       <li>Content, transitions, and conclusions flow smoothly within any time restrictions. (10 points)
     </ul>
 </ul>
+<strong>Data selection</strong>
+<ul>
+  <li>We initially wanted to use the OpenWeather API but realised we could not access historical data with the free plan, which we thought was important to show trends or changes over time.
+  <li>So we chose to switch to the WeatherAPI which allowed us to access that historical data.
+  <li>We looked through the WeatherAPI documentation to decide what we wanted to use for our visualisations.
+</ul>
 
 <strong>Vera Styles</strong><br><br>
 To combine the codes from the contributors:
