@@ -95,3 +95,12 @@ In MongoDB database and collection have been created and Json file has been impo
 Dropdown Menu and Gauge Charts
 
 As in whole project, Javascript codes have been used for functions of dropdown menu to choose a city. Temperature, humidity, and UV gauge charts (indicators) have been created with plotly.js visualization library.
+
+<strong>Lewis Russell</strong><br><br>
+
+I began by using Javascript and HTML to create a weather dashboard that would allow the user to enter any given city using a search function to then be provided with the current weather for that day as well as the forecast for the next four days for that city.
+As well as the weather forecast it would also return the date, the temperature, a brief description of the weather along with a symbol to describe it. I also included a drop down menu which enabled the use to alternate the units of temperature between Celsius, Farenheit or Kelvin.
+
+Due to the fact that my code relied on a search function as opposed to a drop down menu which others members of the group had used we struggled to combine everyone's individual code into one functioning dashboard. We tried to get around this by removing the search function and changing it to a drop down with a list of pre-defined cities, however we still couldn't overcome the challenge of getting all of the different functions on to the same dashboard. Due to the limited time constraints that we had for this project, the decision was made to leave my weather forecast out of the final dashboard, but it has still been included in th final submission as an additional visualisation and to highlight one of the challenges that we faced.
+
+INSERT IMAGE HERE
