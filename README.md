@@ -76,7 +76,7 @@ To display the current day's sunrise time, sunset time & moon phase and a pie ch
                 };
   ```
                                            
-<li>I also had trouble with the correct placement of different parts of the code and making sure I was able to call the data and variables I needed. I have not fully resolved this and my pie chart generates live in the browser as the for loop runs - I would have preferred for it to appear once the code has run, but I now actually think this looks quite cool as long as you have a fast PC!
+<li>I also had trouble with finding the best way to call the data I needed. I have not fully resolved this, I would have preferred to store or cache the data to limit the amount of API calls needed. This means pie chart generates live in the browser as the for loop runs, but I do think this looks quite cool as long as you are able to make the API calls and have a fast PC!
 <li>I also really wanted to combine the weather condition types as there are a lot of similar ones that make it harder to analyse the results. However, this was something I ran out of time to do.</ul>
 <br><br>
 <strong>Isil Bulut</strong><br><br>
