@@ -96,12 +96,6 @@ let cities = [
 ];
 
 
-
-
-
-
-
-
 //getting data from API
 function getData(city) {
   const base = `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${city}`;
