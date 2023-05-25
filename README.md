@@ -46,10 +46,11 @@ To display the map with the markers:
 
 <strong>Julia Begley</strong><br><br>
 To combine the codes from the contributors:
-<ul>
-  <li>Created a wireframe mock up to help visualise the plan:
-    ![image (1)](https://github.com/Rad-icalEdward/meteorologists-project3/assets/121570218/d7a0c5be-de90-45d8-b6b2-0b4bb4cdca89)
 
+![image (1)](https://github.com/Rad-icalEdward/meteorologists-project3/assets/121570218/2ea868b5-51ab-4246-bdb4-a7246ba418cf)
+
+<ul>
+  <li>Created a wireframe mock up to help visualise the plan (see above)
   <li>Updated the basic html and css files to add titles, update formatting, adjust spacing etc.
   <li>Added columns and dashboard layout for the webpage through the html and css files
   <li>Added my code into the file Vera created combining her code with Isil's
