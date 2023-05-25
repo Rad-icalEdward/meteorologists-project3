@@ -77,7 +77,6 @@ To display the current day's sunrise time, sunset time & moon phase and a pie ch
 <strong>Isil Bulut</strong><br><br>
 
 Data Extraction from API to Database
-
 For this project, weather data from weatherapi.com has been used to create an interactive and user-friendly weather dashboard. Firstly, a” UK cities” (uk_cities) list has been created and cities data has been extracted using Python codes in Jupyter Notebook:
  
  ![image](https://github.com/Rad-icalEdward/meteorologists-project3/assets/121508137/10122955-45ec-40b9-bb68-04f6f9525787)
