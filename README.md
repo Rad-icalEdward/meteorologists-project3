@@ -57,6 +57,9 @@ To combine the codes from the contributors:
   <li>Made minor adjustments to the combined javascript code to make sure it all worked together and with the html and css files
 </ul>
 
+<ul>
+  <li>A key issue I had with the HTML, CSS and formatting was with the Plotly charts that have a large amount of white space that I did not figure out how to remove. I tried multiple methods for changing the margins, padding and clipping both in the HTML and CSS files and in the Plotly code itself. In the end I think the final result is OK though.
+
 To display the current day's sunrise time, sunset time & moon phase and a pie chart of weather conditions over the past year in the chosen city:
 <ul>
   <li>I created 2 functions - updateSunMoon and updateWeatherConditions. 
