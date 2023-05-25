@@ -201,6 +201,7 @@ function updateCharts(cityID) {
 // Create a function to return sun and moon information for the current city
 function updateSunMoon(cityID) {
 
+    // Create a function to call an image based on a selected source 
     function imageSunMoon(src, alt, width, height) {
         var img = document.createElement("img");
         img.src = src;
@@ -211,6 +212,7 @@ function updateSunMoon(cityID) {
         document.getElementById("astronomy").appendChild(img);
     };
 
+    // Create varaibles for each of the mooon phase images
     let newMoon = 'static/Images/moon-phases/noun-newmoon-1832266.svg';
     let waxingCrescent = 'static/Images/moon-phases/noun-waxing-crescent-moon-1832256.svg';
     let firstQuarter = 'static/Images/moon-phases/noun-first-quarter-half-moon-1832262.svg';
@@ -220,6 +222,7 @@ function updateSunMoon(cityID) {
     let thirdQuarter = 'static/Images/moon-phases/noun-three-quartet-half-moon-1832259.svg';
     let waningCrescent = 'static/Images/moon-phases/noun-waning-crescent-moon-1832261.svg';
 
+    // Create varaibles for the sunrise and sunset images
     let sunRise = 'static/Images/sun-rise-set/noun-sunrise-1504951.svg';
     let sunSet = 'static/Images/sun-rise-set/noun-sunset-1504950.svg';
 
@@ -230,22 +233,22 @@ function updateSunMoon(cityID) {
         // Extract the json data from the astronomy weather API
         d3.json(currentQueryURL).then(function(data) {
 
-            // Select the city-weather div for the content
+            // Create a variable to select the astronomy div for the content
             let astrologyDiv = document.getElementById("astronomy");
             
-            // Return the sunrise time for the current day
+            // Return the sunrise time for the current day and the sunrise image
             let sunriseTime = data.astronomy.astro.sunrise;
             console.log(sunriseTime);
             astrologyDiv.innerHTML += "Time of today's sunrise: " + sunriseTime + "<br /><br /><br />"; 
             imageSunMoon(sunRise, "sunrise by icon 54 from Noun Project", 100, 100)
             
-            // Return the sunset time time for the current day
+            // Return the sunset time time for the current day and the sunset image
             let sunsetTime = data.astronomy.astro.sunset;
             console.log(sunsetTime);
             astrologyDiv.innerHTML += "<br /><br />Time of today's sunset: " + sunsetTime + "<br /><br /><br />"; 
             imageSunMoon(sunSet, "sunset by icon 54 from Noun Project", 100, 100)
             
-            // Return the moon phase for the current night
+            // Return the moon phase for the current night and the corresponding moon phase image
             let moonPhase = data.astronomy.astro.moon_phase;
             astrologyDiv.innerHTML += "<br /><br />Today's moon phase: " + moonPhase + "<br /><br /><br />";
             
@@ -290,6 +293,7 @@ function updateSunMoon(cityID) {
 // Create function to return a chart with distribution of weather conditions for the chosen city over the previous 365 days
 function updateWeatherConditions(cityID) {
     
+    // Create a function that will count the unique values in the generated list of weather conditions
     function countNew(data) {
         var counting = data.split(',');
     
@@ -298,6 +302,7 @@ function updateWeatherConditions(cityID) {
         })
     };
 
+    // Create an object to hold the count of unqiue weather conditions values
     var newCount = {};
 
     // Get today's date and the date 365 days ago
@@ -310,7 +315,7 @@ function updateWeatherConditions(cityID) {
 
     let daysOfYear = [];
 
-    // Initialize an array to hold weather details.
+    // Create an array to hold weather details.
     let weatherDetails = [];
 
     // Create a for loop to make API calls for each date from 365 days previously until today
@@ -320,9 +325,10 @@ function updateWeatherConditions(cityID) {
 
     for (let i = 0; i < daysOfYear.length; i++) {
 
+        // Create a variable for the date in each loop, adding 1 day each time
         let loopDate = daysOfYear[i];
 
-        // Create a variable for the date in each loop, adding 1 day each time
+        // Create variables for the year, month and day for each date (month is +1 because it is a numeric value with index 0)
         let newQueryYear = loopDate.getFullYear(); 
         let newQueryMonth = loopDate.getMonth()+1;
         let newQueryDay = loopDate.getDate();
@@ -340,16 +346,17 @@ function updateWeatherConditions(cityID) {
         // Extract the json data from the history weather API
         d3.json(historicalQueryURL).then(function(data) {
 
-                // For each station, create a marker, and bind a popup with the station's name.
-                let weatherDetail = data.forecast.forecastday[0].day.condition.text;
+            // For each date extract the weather condition for the chosen city
+            let weatherDetail = data.forecast.forecastday[0].day.condition.text;
 
-                // Add the marker to the bikeMarkers array.
-                weatherDetails.push(weatherDetail);
-            
+            // Add the weather condition text to a list of weather conditions for all dates
+            weatherDetails.push(weatherDetail);
+        
+        // Call the function to count the unique values in the list of all weather conditions
         weatherDetails.forEach(countNew);
         console.log(newCount);
         
-        // Create a chart showing the distribution of weather conditions for the chosen city over the previous 365 days
+        // Create a function to create a chart showing the distribution of weather conditions for the chosen city over the previous 365 days
         function createChartData() {
             let labels = Object.keys(newCount);
             let values = Object.values(newCount);
@@ -380,16 +387,19 @@ function updateWeatherConditions(cityID) {
                 Plotly.newPlot("city-weather", data, layout);
 
         };
+        // Call the function to create the chart after the data is collected
         createChartData();
         });
     };
 };
 
+// Create a function to clear the contents of the astronomy div, ready for the next call when the city is updated
 function clearSunMoon(elementID)
 {
     document.getElementById(elementID).innerHTML = "";
 };
-    
+
+// Call all functions when the city is updated in the drop down list
 function optionChanged(cityID) {
     clearSunMoon("astronomy");
     getCurrent(cityID);
