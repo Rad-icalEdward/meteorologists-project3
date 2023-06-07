@@ -10,7 +10,7 @@ function getWeather() {
   var unitDropdown = document.getElementById('unitDropdown');
   var selectedUnit = unitDropdown.value;
 
-  var apiKey = '2a8f810358a1bee674f1761df0141885';
+  var apiKey = 
   var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
   axios
